@@ -66,6 +66,6 @@ def evaluate(model, val_loader, device ):
 X,y = load_data()
 tensor_dataset = TensorDataset(X, y)
 data_loader = DataLoader(tensor_dataset, batch_size=64, shuffle=True, num_workers=8)
-model = torch.load("model.pth")
+model = torch.load("model2.pth")
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print("Accuracy: " , evaluate(model,data_loader,device))
